@@ -19,7 +19,7 @@ namespace Sport.Application.Controller
             }
 
             Users = GetUsersData()  ?? new List<User>();
-            Console.Write(Users.First());
+            Console.Write(Users.First().Name);              // TEst
             Environment.Exit(500);
             CurrentUser = Users.SingleOrDefault(u => u.Name == userName);
 

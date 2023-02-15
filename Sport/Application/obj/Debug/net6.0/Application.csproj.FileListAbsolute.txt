@@ -1,0 +1,12 @@
+/home/admin/Languages/C#/Projects/Applications/Sport/Application/bin/Debug/net6.0/Application.deps.json
+/home/admin/Languages/C#/Projects/Applications/Sport/Application/bin/Debug/net6.0/Application.dll
+/home/admin/Languages/C#/Projects/Applications/Sport/Application/bin/Debug/net6.0/ref/Application.dll
+/home/admin/Languages/C#/Projects/Applications/Sport/Application/bin/Debug/net6.0/Application.pdb
+/home/admin/Languages/C#/Projects/Applications/Sport/Application/obj/Debug/net6.0/Application.csproj.AssemblyReference.cache
+/home/admin/Languages/C#/Projects/Applications/Sport/Application/obj/Debug/net6.0/Application.GeneratedMSBuildEditorConfig.editorconfig
+/home/admin/Languages/C#/Projects/Applications/Sport/Application/obj/Debug/net6.0/Application.AssemblyInfoInputs.cache
+/home/admin/Languages/C#/Projects/Applications/Sport/Application/obj/Debug/net6.0/Application.AssemblyInfo.cs
+/home/admin/Languages/C#/Projects/Applications/Sport/Application/obj/Debug/net6.0/Application.csproj.CoreCompileInputs.cache
+/home/admin/Languages/C#/Projects/Applications/Sport/Application/obj/Debug/net6.0/Application.dll
+/home/admin/Languages/C#/Projects/Applications/Sport/Application/obj/Debug/net6.0/ref/Application.dll
+/home/admin/Languages/C#/Projects/Applications/Sport/Application/obj/Debug/net6.0/Application.pdb

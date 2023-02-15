@@ -8,7 +8,7 @@ namespace Sport.Application.Controller
 
         public List<User> Users { get; }
 
-        public User CurrentUser { get; set; } 
+        public User CurrentUser { get; set; } = default!;
 
         public bool IsNewUser { get; } = false;
 
@@ -18,10 +18,8 @@ namespace Sport.Application.Controller
                 throw new ArgumentNullException("имя пользователя не может быть пустым", nameof(userName));
             }
 
-            Users = GetUsersData()  ?? new List<User>();
-            Console.Write(Users.First().Name);              // TEst
-            Environment.Exit(500);
-            CurrentUser = Users.SingleOrDefault(u => u.Name == userName);
+            Users = GetUsersData() ?? new List<User>();
+            CurrentUser = Users.SingleOrDefault(u => u.Name == userName)!;
 
             if(CurrentUser == null) {
                 IsNewUser = true;
@@ -35,8 +33,9 @@ namespace Sport.Application.Controller
 
         public void SetNewUserData(string userName, string genderName, DateTime birthDate, double weight = 1, double height = 1)
         {
-            CurrentUser = new User(userName);
+            CurrentUser = new User();
 
+            CurrentUser.Name = userName;
             CurrentUser.Gender = genderName;
             CurrentUser.BirthDate = birthDate;
             CurrentUser.Weight = weight;

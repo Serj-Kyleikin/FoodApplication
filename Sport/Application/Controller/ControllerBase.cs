@@ -38,7 +38,7 @@ namespace Sport.Application.Controller
                 if(File.Exists(fileName)) {
 
                     string data = File.ReadAllText(fileName);
-                    return JsonSerializer.Deserialize<T>(data);
+                    return JsonSerializer.Deserialize<T>(data)!;
 
                 } else return default(T)!;
 

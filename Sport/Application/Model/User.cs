@@ -5,7 +5,7 @@ namespace Sport.Application.Model
     [Serializable]
     public class User
     {
-        public string Name { get; } = "TEst";
+        public string Name { get; set; }
 
         public string Gender {get; set; }
         public DateTime BirthDate { get; set; }
@@ -22,6 +22,11 @@ namespace Sport.Application.Model
 
                 return DateTime.Now.Year - BirthDate.Year;
             }
+        }
+
+        public User() {
+            Name = "";
+            Gender = "";
         }
 
         public User(string name, 
@@ -58,13 +63,6 @@ namespace Sport.Application.Model
             BirthDate = birthDate;
             Weight = weight;
             Height = height;
-        }
-
-        public User() {}
-
-        public override string ToString()
-        {
-            return Name + " " + Age;
         }
     }
 }

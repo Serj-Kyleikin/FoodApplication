@@ -1,4 +1,4 @@
-﻿using Sport.Application.Controller;
+using Sport.Application.Controller;
 using Sport.Application.Model;
 using System.Resources;
 

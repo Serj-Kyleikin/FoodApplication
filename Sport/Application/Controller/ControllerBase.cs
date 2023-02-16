@@ -5,19 +5,19 @@ namespace Sport.Application.Controller
 {
     public abstract class ControllerBase
     {
-        protected void Save(string fileName, object item)
+        protected void Save<T>(string fileName, T item)
         {
             try {
 
                 JsonSerializerOptions options = new JsonSerializerOptions {
 
-                    // Отключаем экранирование и одновременно включаем форматирование.
+                    // Отключение экранирования и включение форматирования.
 
                     Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
                     WriteIndented = true
                 };
 
-                string data =  JsonSerializer.Serialize(item, typeof(object), options);
+                string data =  JsonSerializer.Serialize(item, typeof(T), options);
 
                 StreamWriter file = File.CreateText(fileName);
                 file.WriteLine(data);
@@ -26,8 +26,7 @@ namespace Sport.Application.Controller
             } catch (Exception ex) {
 
                 Console.WriteLine($"Ошибка: {ex.Message} \n\n");
-                Console.WriteLine(ex.StackTrace);
-                Environment.Exit(500);
+                pr(ex.StackTrace);
             }
         }
 
@@ -45,8 +44,7 @@ namespace Sport.Application.Controller
             } catch(Exception ex) {
 
                 Console.WriteLine($"Ошибка: {ex.Message} \n\n");
-                Console.WriteLine(ex.StackTrace);
-                Environment.Exit(500);
+                pr(ex.StackTrace);
 
                 return default(T)!;
             }

@@ -36,8 +36,6 @@ namespace Sport.Application.Model
 
         public Food() : this("", 0, 0, 0, 0) { }
 
-        public Food(string name)  : this(name, 0, 0, 0, 0) { }
-
         public Food(string name, double calories, double proteins, double fats, double carbohydrates)
         {
             Name = name;

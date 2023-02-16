@@ -20,16 +20,16 @@ namespace Sport.Application.Controller
             Eating = GetEatings();
         }
 
-        public void Add(Food food, double weight)
+        public void AddConsumedFood(Food food, double weight)
         {
             var product = Foods.SingleOrDefault(f => f.Name == food.Name);
 
             if(product == null) {
 
                 Foods.Add(food);
-                Eating.Add(food, weight);
+                Eating.AddEating(food, weight);
   
-            } else Eating.Add(product, weight);
+            } else Eating.AddEating(product, weight);
 
             Save();
         }
